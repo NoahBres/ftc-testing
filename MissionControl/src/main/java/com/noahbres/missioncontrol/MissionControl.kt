@@ -70,6 +70,10 @@ class MissionControl(activity : Activity, sendSensorData : Boolean) : SocketList
         webSocket.sendMessage(conn, LogModel("testing ", "init", Date()))
     }
 
+    override fun onMessage(conn: org.java_websocket.WebSocket?, msg: String?) {
+        Log.i("MissionControl", "Message: $msg")
+    }
+
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
     }
 
