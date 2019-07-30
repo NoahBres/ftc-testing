@@ -168,7 +168,7 @@ public class FtcRobotControllerActivity extends Activity
   protected MotionDetection motionDetection;
 
   // Mission Control
-  public MissionControl missionControl = new MissionControl();
+  public MissionControl missionControl = new MissionControl(this, true);
 
   protected class RobotRestarter implements Restarter {
 
